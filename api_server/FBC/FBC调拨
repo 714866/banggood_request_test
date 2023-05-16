@@ -1,0 +1,37 @@
+请求：
+调用id：844a440aea0645b0b4fef4855e4b72c9，url：https://api.banggood.cn/sp/kong/storage/MarketplaceAPIService.svc，调用CD平台接口参数：{"param":{"productList":[{"productEAN":"6472063406343","quantity":10,"warehouse":"CEM"}]},"shopId":4927}，发送xml：<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cdis="http://www.cdiscount.com" xmlns:cdis1="http://schemas.datacontract.org/2004/07/Cdiscount.Framework.Core.Communication.Messages" xmlns:sys="http://schemas.datacontract.org/2004/07/System.Device.Location" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <cdis:SubmitFulfilmentSupplyOrder>
+            <cdis:headerMessage>
+                <cdis1:Context>
+                    <cdis1:CatalogID>1</cdis1:CatalogID>
+                    <cdis1:CustomerID>123</cdis1:CustomerID>
+                    <cdis1:CustomerPoolID>1</cdis1:CustomerPoolID>
+                    <cdis1:SiteID>100</cdis1:SiteID>
+                </cdis1:Context>
+                <cdis1:Localization>
+                    <cdis1:Country>Fr</cdis1:Country>
+                    <cdis1:Currency>Eur</cdis1:Currency>
+                    <cdis1:DecimalPosition>2</cdis1:DecimalPosition>
+                    <cdis1:Language>Fr</cdis1:Language>
+                </cdis1:Localization>
+                <cdis1:Security>
+                    <cdis1:DomainRightsList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></cdis1:DomainRightsList>
+                    <cdis1:IssuerID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></cdis1:IssuerID>
+                    <cdis1:SessionID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></cdis1:SessionID>
+                    <cdis1:TokenId>${#Project#token}</cdis1:TokenId>
+                    <cdis1:UserName xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></cdis1:UserName>
+                </cdis1:Security>
+                <cdis1:Version>1.0</cdis1:Version>
+            </cdis:headerMessage>
+            <cdis:request><cdis:ProductList><cdis:FulfilmentProductDescription><cdis:ProductEan>6472063406343</cdis:ProductEan><cdis:Quantity>10</cdis:Quantity><cdis:Warehouse>CEM</cdis:Warehouse></cdis:FulfilmentProductDescription></cdis:ProductList></cdis:request>
+        </cdis:SubmitFulfilmentSupplyOrder>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+
+返回参数：
+调用CD平台接口返回值：<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SubmitFulfilmentSupplyOrderResponse xmlns="http://www.cdiscount.com"><SubmitFulfilmentSupplyOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ErrorMessage xmlns="http://schemas.datacontract.org/2004/07/Cdiscount.Framework.Core.Communication.Messages"/><OperationSuccess xmlns="http://schemas.datacontract.org/2004/07/Cdiscount.Framework.Core.Communication.Messages">true</OperationSuccess><ErrorList/><SellerLogin>PROMOREMALL</SellerLogin><TokenId>e43b8dadb8e844618ced6255af300821</TokenId><DepositId>3986011</DepositId></SubmitFulfilmentSupplyOrderResult></SubmitFulfilmentSupplyOrderResponse></s:Body></s:Envelope>
+
